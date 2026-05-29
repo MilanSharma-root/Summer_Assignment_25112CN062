@@ -9,5 +9,6 @@ public class Q1{
             sum += i;
         }
         System.out.println("Sum = " + sum);
+        k.close();
     }
 }
