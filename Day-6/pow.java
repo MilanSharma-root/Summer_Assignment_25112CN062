@@ -14,6 +14,6 @@ class pow {
             answer *= x;
         }
 
-        System.out.println(answer);
+        System.out.println(answer);3
     }
 }
