@@ -1,0 +1,47 @@
+// Java program to find a pair of elements with a given sum
+
+import java.util.Scanner;
+
+public class Q63 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, target;
+
+        // Input size of array
+        System.out.print("Enter the number of elements: ");
+        n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        // Input array elements
+        System.out.print("Enter the array elements: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Input target sum
+        System.out.print("Enter the target sum: ");
+        target = sc.nextInt();
+
+        boolean found = false;
+
+        // Check all possible pairs
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] + arr[j] == target) {
+                    System.out.println("Pair found: (" + arr[i] + ", " + arr[j] + ")");
+                    found = true;
+                }
+            }
+        }
+
+        // If no pair exists
+        if (!found) {
+            System.out.println("No pair found with the given sum.");
+        }
+
+        sc.close();
+    }
+}
+
